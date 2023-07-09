@@ -1,0 +1,18 @@
+function checkTriangleType(side1, side2, side3) 
+{
+  if (side1 === side2 && side2 === side3) 
+{
+    return "Equilateral triangle";
+  } 
+else if (side1 === side2 || side1 === side3 || side2 === side3) {
+    return "Isosceles triangle";
+  } 
+else {
+    return "Scalene triangle";
+  }
+}
+
+// Example usage:
+console.log(checkTriangleType(5, 5, 5)); // Output: Equilateral triangle
+console.log(checkTriangleType(5, 5, 6)); // Output: Isosceles triangle
+console.log(checkTriangleType(3, 4, 5)); // Output: Scalene triangle

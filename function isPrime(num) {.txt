@@ -1,0 +1,36 @@
+function isPrime(num) {
+  if (num < 2) {
+    return false;
+  }
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function factorialOfPrimesInRange(start, end) {
+  const primes = [];
+
+  for (let i = start; i <= end; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+
+  const factorials = primes.map((num) => {
+    let factorial = 1;
+    for (let j = 2; j <= num; j++) {
+      factorial *= j;
+    }
+    return factorial;
+  });
+
+  return factorials;
+}
+
+// Example usage:
+console.log(factorialOfPrimesInRange(1, 100));

@@ -1,0 +1,40 @@
+function calculateGrade(marks) {
+  switch (true) {
+    case (marks >= 90 && marks <= 100):
+      return "S grade";
+    case (marks >= 80 && marks < 90):
+      return "A grade";
+    case (marks >= 70 && marks < 80):
+      return "B grade";
+    case (marks >= 60 && marks < 70):
+      return "C grade";
+    case (marks >= 50 && marks < 60):
+      return "D grade";
+    case (marks >= 40 && marks < 50):
+      return "E grade";
+    case (marks >= 0 && marks < 40):
+      return "Student has failed";
+    default:
+      return "Invalid marks";
+  }
+}
+
+// Example usage:
+console.log(calculateGrade(95)); // Output: S grade
+console.log(calculateGrade(85)); // Output: A grade
+console.log(calculateGrade(75)); // Output: B grade
+console.log(calculateGrade(65)); // Output: C grade
+console.log(calculateGrade(55)); // Output: D grade
+console.log(calculateGrade(45)); // Output: E grade
+console.log(calculateGrade(25)); // Output: Student has failed
+console.log(calculateGrade(105)); // Output: Invalid marks
+
+
+
+
+
+
+
+In this function, the parameter marks represents the marks obtained by the student. The switch case statement checks the value of marks against different ranges and returns the corresponding grade based on the conditions specified. If none of the conditions are met, it returns "Invalid marks".
+
+You can test the function with different marks to see the corresponding grades.
